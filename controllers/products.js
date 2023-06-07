@@ -47,6 +47,7 @@ const getAllProducts = async (req, res) => {
         const itemSplitted = item.split('-');
         const [property, operator, value] = itemSplitted;
         if (options.includes(property)) {
+          console.log(obj);
           obj[property] = { [operator]: Number(value) };
         }
       });
